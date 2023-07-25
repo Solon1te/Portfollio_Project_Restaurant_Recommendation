@@ -3,7 +3,7 @@ from restaurant_choices import restaurant_choices
 
 cuisine_string = ''
 for type in types:
-    cuisine_string += '\n' + type + '\n' 
+    cuisine_string +=  '-------' + '\n' + type + '\n' 
 
 def greet():
     print('Welcome to Marks Restaurant Recommendation Tool')
@@ -12,27 +12,48 @@ def greet():
 def get_input():
     desired_cuisine_letter = input("Please select the first letter of your desired cuisine")
     if desired_cuisine_letter == 'g':
-        print()
+        return 'german'
     elif desired_cuisine_letter == 'j':
-        print()
+        return 'japanese'
     elif desired_cuisine_letter == 'v':
-        print()
+        return 'vegetarian'
     elif desired_cuisine_letter == 'f':
-        print()
+        return 'french'
     elif desired_cuisine_letter == 'a':
-        print()
+        desired_cuisine_letter += input('You selected {} please enter the next letter of your choice: african, american'.format(desired_cuisine_letter))
+        if desired_cuisine_letter == 'af':
+            return 'african'
+        elif desired_cuisine_letter == 'am':
+            return 'american'
+        else:
+            print('letter not recognized please try again')
+            
     elif desired_cuisine_letter == 'b':
-        print()
+        return 'barbecue'
     elif desired_cuisine_letter == 'c':
-        print()
+        desired_cuisine_letter += input('You selected {} please enter the next letter of your choice: czech, chinese, cafe'.format(desired_cuisine_letter))
+        if desired_cuisine_letter == 'cz':
+            return 'czech'
+        elif desired_cuisine_letter == 'ch':
+            return 'chinese'
+        elif desired_cuisine_letter == 'ca':
+            return 'cafe'
+        else:
+            print('letter not recognized please try again')
     elif desired_cuisine_letter == 't':
-        print()
+        return 'thai'
     elif desired_cuisine_letter == 'm':
-        print()
+        return 'mexican'
     elif desired_cuisine_letter == 'i':
-        print()
+        desired_cuisine_letter += input('You selected {} please enter the next letter of your choice: indian, italian'.format(desired_cuisine_letter))
+        if desired_cuisine_letter == 'in':
+            return 'indian'
+        elif desired_cuisine_letter == 'it':
+            return 'italian'
+        else: 
+            print('letter not recognized please try again')
     elif desired_cuisine_letter == 'p':
-        print()
+        return 'pizza'
     else:
         print('No options with starting with: {} please try again.'.format(desired_cuisine_letter))
         get_input()
