@@ -26,8 +26,7 @@ def get_input():
         elif desired_cuisine_letter == 'am':
             return 'american'
         else:
-            print('letter not recognized please try again')
-            
+            print('letter not recognized please try again')        
     elif desired_cuisine_letter == 'b':
         return 'barbecue'
     elif desired_cuisine_letter == 'c':
@@ -60,6 +59,13 @@ def get_input():
 
 def restaurant_recomendation():
     greet()
+    get_input()
     
 
 restaurant_recomendation()
+
+
+def get_restaurant_type(restraunts):
+    for restaurant in restaurant_choices:
+        if restaurant[0] == get_input():
+            return restaurant[0]
