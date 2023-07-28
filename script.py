@@ -65,7 +65,7 @@ def restaurant_recomendation():
 restaurant_recomendation()
 
 
-def get_restaurant_type(restraunts):
-    for restaurant in restaurant_choices:
-        if restaurant[0] == get_input():
-            return restaurant[0]
+def get_restaurant_type():
+     for resturant in restaurant_choices:
+         for cuisine in resturant:
+             print(cuisine)
