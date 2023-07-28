@@ -94,8 +94,7 @@ def get_restaurant_type():
 def try_again():
     loop = input('Would you Like to see recomendations for another Cusine? Press Y for yes and N for no')
     if loop == 'y':
-        greet()
-        get_restaurant_type()
+        restaurant_recomendation()
     elif loop == 'n':
         print('Thank you for using Marks Restaurant Recommendation Tool...Goodbye.')
     else:
